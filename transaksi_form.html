@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa Mobil 319SKYL</title>
+    <link rel="stylesheet" href="sanbe.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="img/logo.png" alt="Company Logo" class="logo">
+            <h1>SEWA MOBIL 319SKYL</h1>
+        </div>
+    </header>
+    <nav>
+        <a href="website_ikhsan.html">Beranda</a>
+        <a href="transaksi_form.html">Transaksi</a>
+        <a href="invoice.html">Invoice</a>
+        <a href="kontak_form.html">Kontak</a>
+        <a href="tentang.html">Tentang</a>
+    </nav>
+    
+    <main class="content">
+        <div class="car">
+            <img src="img/Vios.jpg" alt="Mobil Vios">
+            <h3>Mobil Vios</h3>
+            <p>Kategori: SEDAN</p>
+            <p>Harga Perhari: Rp. 500.000/hari</p>
+            <button onclick="openModal('Mobil Vios', 500000)">Pesan Sekarang</button>
+        </div>
+        <div class="car">
+            <img src="img/City.jpg" alt="Mobil City">
+            <h3>Mobil City</h3>
+            <p>Kategori: SEDAN</p>
+            <p>Harga Perhari: Rp. 600.000/hari</p>
+            <button onclick="openModal('Mobil City', 600000)">Pesan Sekarang</button>
+        </div>
+        <div class="car">
+            <img src="img/civic.jpg" alt="Mobil Civic">
+            <h3>Mobil Civic</h3>
+            <p>Kategori: SEDAN</p>
+            <p>Harga Perhari: Rp. 700.000/hari</p>
+            <button onclick="openModal('Mobil Civic', 700000)">Pesan Sekarang</button>
+        </div>
+        <div class="car">
+            <img src="img/yaris.png" alt="Mobil Yaris">
+            <h3>Mobil Yaris</h3>
+            <p>Kategori: SEDAN</p>
+            <p>Harga Perhari: Rp. 550.000/hari</p>
+            <button onclick="openModal('Mobil Yaris', 550000)">Pesan Sekarang</button>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Sewa Mobil 319SKYL
+    </footer>
+
+    
+    <div id="transactionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Formulir Transaksi</h2>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label for="carName">Nama Mobil:</label>
+                    <input type="text" id="carName" name="carName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Nama Lengkap:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="rentalDays">Jumlah Hari Sewa:</label>
+                    <input type="number" id="rentalDays" name="rentalDays" required>
+                </div>
+                <div class="form-group">
+                    <label for="totalPrice">Harga Perhari:</label>
+                    <input type="text" id="totalPrice" name="totalPrice" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Metode Pembayaran:</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">Pilih Metode Pembayaran</option>
+                        <option value="BNI">BNI</option>
+                        <option value="BCA">BCA</option>
+                        <option value="Dana">Dana</option>
+                        <option value="ShopeePay">ShopeePay</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                <button type="submit">Konfirmasi Transaksi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConfirmationModal()">&times;</span>
+            <h2>Transaksi Berhasil &#9989;</h2>
+            <p id="confirmationMessage"></p>
+        </div>
+    </div>
+    
+    <script src="sansbe.js" defer></script>
+</body>
+</html>
